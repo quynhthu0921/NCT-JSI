@@ -94,7 +94,7 @@ let products = [
 let product_list = document.querySelector('#latest-products')
 
 products.forEach(e => {
-    let prod = `
+    let cart = `
         <div class="col-3 col-md-6 col-sm-12">
             <div class="product-card">
                 <div class="product-card-img">
@@ -104,7 +104,7 @@ products.forEach(e => {
                 <div class="product-card-info">
                     <div class="product-btn">
                         <button class="btn-flat btn-hover btn-shop-now">Mua ngay</button>
-                        <button class="btn-flat btn-hover btn-cart-add">
+                        <button onclick="handleAddToCartClicked(${e.name}) class="btn-flat btn-hover btn-cart-add">
                             <i class='bx bxs-cart-add'></i>
                         </button>
                         <button class="btn-flat btn-hover btn-cart-add">
@@ -122,7 +122,7 @@ products.forEach(e => {
         </div>
     `
 
-    product_list.insertAdjacentHTML("beforeend", prod)
+    product_list.insertAdjacentHTML("beforeend", cart)
     
 })
 
@@ -174,7 +174,7 @@ let products1 = [
 let best_product_list = document.querySelector('#best-products')
 
 products1.forEach(e => {
-    let prod = `
+    let cart = `
         <div class="col-3 col-md-6 col-sm-12">
             <div class="product-card">
                 <div class="product-card-img">
@@ -202,6 +202,6 @@ products1.forEach(e => {
         </div>
     `
 
-    best_product_list.insertAdjacentHTML("afterbegin", prod)
+    best_product_list.insertAdjacentHTML("afterbegin", cart)
     
 })
