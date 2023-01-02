@@ -37,3 +37,13 @@ const addToCart = (productId) => {
     updateCartCount();
   };
   
+
+  const updateCartCount = () => {
+    if (localStorage.getItem("cart")) {
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      document.getElementById("cart-count").innerText = cart.length;
+    }
+  };
+  
+  updateCartCount();
+  
